@@ -258,6 +258,12 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
   border-top: 1px solid #2a2a30; margin-top: 2.5rem; padding-top: 1.2rem;
   font-size: .85rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
 }
+.footer__logo {
+  background: #fff; padding: .4rem .6rem; border-radius: 8px;
+  display: inline-block; border-top: 3px solid var(--azul);
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+.footer__logo img { height: 42px; width: auto; }
 .footer__logo strong { color: var(--azul); }
 
 /* ===================== BLOG CARDS ===================== */
@@ -294,10 +300,12 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
 
 /* ===================== CTA BAR ===================== */
 .cta-bar {
-  background: var(--azul); color: #fff; padding: 2.5rem 0; text-align: center;
+  background: var(--azul); color: #fff; padding: 2.5rem 1rem; text-align: center;
 }
 .cta-bar h2 { color: #fff; }
 .cta-bar p { color: #DFF4FC; margin: .6rem 0 1.4rem; }
+.cta-bar .btn { background: #fff; color: var(--azul); border: 2px solid #fff; }
+.cta-bar .btn:hover { background: var(--cinza-100); color: var(--azul-escuro); border-color: var(--cinza-100); }
 
 /* ===================== BLOCO PORTO SEGURO ===================== */
 .porto-seguro-bar{
@@ -428,7 +436,7 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
   .nav { gap: 1rem; }
   .nav a { font-size: .88rem; }
   .header .btn { display: none; }
-  .hero__grid { grid-template-columns: 1fr; }
+  .hero__grid { grid-template-columns: 1fr; gap: 2rem; }
   .hero__photo img { height: 280px; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .form { grid-template-columns: 1fr; }
@@ -436,7 +444,7 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
 
 @media (max-width: 720px) {
   /* Menu vira hamburger */
-  .header__inner { padding: .7rem 0; }
+  .header__inner { padding: .6rem 0; gap: .6rem; }
   .nav-toggle { display: inline-flex; }
   .nav {
     position: fixed; top: 64px; left: 0; right: 0;
@@ -455,7 +463,7 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
   .nav a.is-active { color: var(--azul); }
 
   /* Logo um pouco menor no mobile */
-  .logo img { height: 50px; }
+  .logo img { height: 48px; max-width: 220px; object-fit: contain; }
   .logo__text strong { font-size: 1.15rem; }
   .logo__text span { font-size: .6rem; }
 
