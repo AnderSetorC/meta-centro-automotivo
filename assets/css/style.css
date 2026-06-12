@@ -132,7 +132,7 @@ h3 { font-size: 1.2rem; }
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md);
   border: 4px solid rgba(255,255,255,.08);
 }
-.hero__photo img { width: 100%; height: 380px; object-fit: cover; }
+.hero__photo img { width: 100%; height: 380px; object-fit: cover; transition: opacity .3s ease; }
 
 /* ===================== SEÇÕES GERAIS ===================== */
 section { padding: clamp(3rem, 5vw, 5rem) 0; }

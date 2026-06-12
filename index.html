@@ -131,7 +131,7 @@
       </div>
     </div>
     <div class="hero__photo">
-      <img src="assets/img/perdizes/oficina-perdizes-4.jpeg" alt="Fachada da unidade Meta Centro Automotivo em Perdizes, São Paulo — Centro Automotivo credenciado Porto Seguro" />
+      <img id="hero-img" src="assets/img/perdizes/oficina-perdizes-4.jpeg" alt="Fachada da unidade Meta Centro Automotivo em Perdizes, São Paulo — Centro Automotivo credenciado Porto Seguro" />
     </div>
   </div>
 </section>
@@ -366,6 +366,25 @@
       const open = nav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  }
+
+  // Reveza automaticamente a foto do hero entre as duas unidades
+  const heroImg = document.getElementById('hero-img');
+  if (heroImg) {
+    const fotos = [
+      { src: 'assets/img/perdizes/oficina-perdizes-4.jpeg', alt: 'Fachada da unidade Meta Centro Automotivo em Perdizes, São Paulo — Centro Automotivo credenciado Porto Seguro' },
+      { src: 'assets/img/barra-funda/oficina-barra-funda-3.jpeg', alt: 'Fachada da unidade Meta Centro Automotivo na Barra Funda, São Paulo — Centro Automotivo credenciado Porto Seguro' }
+    ];
+    let atual = 0;
+    setInterval(() => {
+      atual = (atual + 1) % fotos.length;
+      heroImg.style.opacity = '0';
+      setTimeout(() => {
+        heroImg.src = fotos[atual].src;
+        heroImg.alt = fotos[atual].alt;
+        heroImg.style.opacity = '1';
+      }, 300);
+    }, 4000);
   }
 </script>
 
