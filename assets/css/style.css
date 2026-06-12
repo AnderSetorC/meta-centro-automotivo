@@ -307,6 +307,51 @@ section { padding: clamp(3rem, 5vw, 5rem) 0; }
 .cta-bar .btn { background: #fff; color: var(--azul); border: 2px solid #fff; }
 .cta-bar .btn:hover { background: var(--cinza-100); color: var(--azul-escuro); border-color: var(--cinza-100); }
 
+/* ===================== BOTÕES WHATSAPP DAS UNIDADES ===================== */
+.cta-unidades{
+  background: linear-gradient(180deg, #fff 0%, var(--cinza-100) 100%);
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--cinza-100);
+}
+.cta-unidades__wrap{
+  display: flex; justify-content: center; align-items: center;
+  gap: 1rem; flex-wrap: wrap;
+}
+.btn-unidade{
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: linear-gradient(180deg, #00AEEF 0%, #0085B3 100%);
+  color: #fff; text-decoration: none;
+  padding: .9rem 1.6rem; border-radius: 999px;
+  font-weight: 800; font-size: 1rem; letter-spacing: .04em;
+  box-shadow: 0 4px 14px rgba(0, 174, 239, .35), inset 0 1px 0 rgba(255,255,255,.3);
+  border: 2px solid rgba(255,255,255,.4);
+  transition: transform .15s, box-shadow .15s;
+  text-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+.btn-unidade:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 174, 239, .5);
+  color: #fff;
+}
+.btn-unidade:active{ transform: translateY(0); }
+.btn-unidade .ico{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  flex-shrink: 0;
+}
+.btn-unidade .ico svg{ width: 16px; height: 16px; fill: #fff; }
+.btn-unidade .meta{ color: #fff; font-weight: 800; }
+.btn-unidade .unidade{ color: #FFD700; font-weight: 800; }
+.btn-unidade .cidade{
+  display: block; font-size: .72rem; font-weight: 600;
+  letter-spacing: .15em; color: #fff; opacity: .85; margin-top: 1px;
+}
+@media (max-width: 480px){
+  .btn-unidade{ padding: .8rem 1.2rem; font-size: .9rem; }
+  .btn-unidade .cidade{ font-size: .65rem; }
+}
+
 /* ===================== BLOCO PORTO SEGURO ===================== */
 .porto-seguro-bar{
   background: linear-gradient(90deg, #001E50 0%, #002F8A 100%);
