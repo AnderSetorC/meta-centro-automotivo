@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://centroautomotivometa.com.br/sitemap.xml

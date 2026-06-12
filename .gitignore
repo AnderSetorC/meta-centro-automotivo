@@ -1,0 +1,12 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore backup files
+*.json
+*.bak
+
+# Ignore image source files (keep HTML/CSS/JS)
+*.psd
+*.ai
+*.pdf
