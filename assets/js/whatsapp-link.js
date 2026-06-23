@@ -3,17 +3,28 @@
 (function () {
   'use strict';
 
-  var MENSAGEM = 'Olá! Vim pelo site do Centro Automotivo Meta e gostaria de atendimento!';
+  var MSG_PADRAO = 'Olá! Vim pelo site do Centro Automotivo Meta e gostaria de atendimento!';
+  var UNIDADES = {
+    'perdizes':    'Perdizes',
+    'barra-funda': 'Barra Funda'
+  };
 
   // Extrai o número de telefone de um link wa.me/ ou api.whatsapp.com/send/
   function extrairTelefone(href) {
-    // 1) wa.me/NUMERO (formato antigo)
     var m1 = href.match(/wa\.me\/(\d+)/);
     if (m1) return m1[1];
-    // 2) api.whatsapp.com/send/?phone=NUMERO  (com ou sem &type=&app_absent=)
     var m2 = href.match(/api\.whatsapp\.com\/send\/\?[^#]*phone=(\d+)/);
     if (m2) return m2[1];
     return null;
+  }
+
+  // Monta a mensagem final considerando data-unidade (se houver)
+  function montarMensagem(link) {
+    var unidade = link.dataset.unidade && UNIDADES[link.dataset.unidade];
+    if (unidade) {
+      return 'Olá! Vim pelo site do Centro Automotivo Meta e gostaria de atendimento na unidade ' + unidade + '!';
+    }
+    return MSG_PADRAO;
   }
 
   function montarLink(telefone, texto) {
@@ -29,7 +40,7 @@
     var telefone = extrairTelefone(href);
     if (!telefone) return;
 
-    link.href = montarLink(telefone, MENSAGEM);
+    link.href = montarLink(telefone, montarMensagem(link));
     link.dataset.zapOk = '1';
   }
 
