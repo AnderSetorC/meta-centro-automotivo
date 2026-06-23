@@ -52,7 +52,7 @@
       'Domingo: fechado';
 
     var numero = WHATS[dados.unidade] || WHATS['Sem preferência'];
-    var url = 'https://wa.me/' + numero + '?text=' + texto;
+    var url = 'https://api.whatsapp.com/send/?phone=' + numero + '&text=' + texto + '&type=phone_number&app_absent=0';
 
     // Feedback visual
     var btn = f.querySelector('button[type="submit"]');
