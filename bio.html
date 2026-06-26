@@ -92,6 +92,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .unit-card__nums a.zap{background:rgba(37,211,102,.18);border:1px solid rgba(37,211,102,.4)}
     .unit-card__nums a.zap .ico{background:rgba(37,211,102,.4)}
 
+    /* Grupo dos CTAs principais */
+    .cta-zap-group{display:flex;flex-direction:column;gap:.6rem}
+
+    /* Botão "Acessar o site" (azul de marca, hierarquia abaixo dos verdes) */
+    .cta-site{
+      display:flex;align-items:center;justify-content:center;gap:.6rem;
+      background:#00AEEF;color:#fff;text-decoration:none;
+      width:100%;padding:.9rem 1.2rem;border-radius:14px;
+      font-size:.95rem;font-weight:700;
+      box-shadow:0 4px 14px rgba(0,174,239,.35);
+      transition:transform .15s,box-shadow .15s;
+    }
+    .cta-site:active{transform:scale(.98)}
+    .cta-site .pill{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:34px;height:34px;border-radius:50%;
+      background:rgba(255,255,255,.2);
+    }
+    .cta-site .pill svg{width:20px;height:20px;fill:#fff}
+
+    /* Cabeçalho do card — endereço em 2 linhas + pin alinhado ao topo */
+    .unit-card__head{align-items:flex-start}
+    .unit-card__head > span:last-child{flex:1}
+    .unit-card__addr{font-weight:500;font-size:.78rem;opacity:.75;margin-top:.25rem;line-height:1.35}
+
+    /* "Como chegar" — azul de marca */
+    .unit-card__nums a.maps{background:rgba(0,174,239,.18);border:1px solid rgba(0,174,239,.4)}
+    .unit-card__nums a.maps .ico{background:rgba(0,174,239,.4)}
+
+    /* "Ligar" — destaque verde WhatsApp sólido */
+    .unit-card__nums a.call{
+      background:#25D366;color:#fff;
+      border:1px solid rgba(255,255,255,.15);
+      box-shadow:0 2px 10px rgba(37,211,102,.35);
+      font-weight:700;
+    }
+    .unit-card__nums a.call:active{background:#1ebe57}
+    .unit-card__nums a.call .ico{background:rgba(255,255,255,.25)}
+
     /* Links secundários */
     .link{
       display:flex;align-items:center;gap:.9rem;
@@ -175,43 +214,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ====== CONTATO (PRIMEIRO) ====== -->
   <div class="section-title">Fale conosco</div>
 
-  <a class="cta-zap" href="https://api.whatsapp.com/send/?phone=5511942709348&text=Olá!%20Vim%20pelo%20site%20do%20Centro%20Automotivo%20Meta%20e%20gostaria%20de%20atendimento!&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-    <span class="pill"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5 1.78.76 2.47.82 3.36.7.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg></span>
-    WhatsApp Perdizes
-  </a>
+  <div class="cta-zap-group">
+    <a class="cta-zap" href="https://api.whatsapp.com/send/?phone=5511942709348&text=Olá!%20Vim%20pelo%20site%20do%20Centro%20Automotivo%20Meta%20e%20gostaria%20de%20atendimento!&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5 1.78.76 2.47.82 3.36.7.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg></span>
+      WhatsApp Perdizes
+    </a>
+    <a class="cta-zap" href="https://api.whatsapp.com/send/?phone=5511991998096&text=Olá!%20Vim%20pelo%20site%20do%20Centro%20Automotivo%20Meta%20e%20gostaria%20de%20atendimento!&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5 1.78.76 2.47.82 3.36.7.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg></span>
+      WhatsApp Barra Funda
+    </a>
+    <a class="cta-site" href="https://centroautomotivometa.com.br" target="_blank" rel="noopener">
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4c.96 1.16 1.72 2.6 2.2 4H9.8C10.28 6.6 11.04 5.16 12 4zM4.26 14a8 8 0 0 1 0-4h3.38a16.6 16.6 0 0 0 0 4H4.26zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A8.03 8.03 0 0 1 5.07 16zm2.95-8H5.07a8.03 8.03 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8zM12 20c-.96-1.16-1.72-2.6-2.2-4h4.4c-.48 1.4-1.24 2.84-2.2 4zm2.34-6H9.66a14.6 14.6 0 0 1 0-4h4.68a14.6 14.6 0 0 1 0 4zm.32 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14a16.6 16.6 0 0 0 0-4h3.38a8 8 0 0 1 0 4h-3.38z"/></svg></span>
+      Acessar o site
+    </a>
+  </div>
 
   <div class="section-title">Atendimento por unidade</div>
 
   <div class="unit-card">
     <div class="unit-card__head">
-      <span class="pin"></span>
-      Unidade Perdizes
+      <span class="pin">📍</span>
+      <span>
+        <strong>Unidade Perdizes</strong>
+        <div class="unit-card__addr">Av. Sumaré, 73 — Perdizes<br>São Paulo — SP · CEP 01256-110</div>
+      </span>
     </div>
     <div class="unit-card__nums">
-      <a class="zap" href="https://api.whatsapp.com/send/?phone=5511942709348&text=Olá!%20Vim%20pelo%20site%20do%20Centro%20Automotivo%20Meta%20e%20gostaria%20de%20atendimento!&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5 1.78.76 2.47.82 3.36.7.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg></span>
-        <span>WhatsApp<small>+55 11 94270-9348</small></span>
+      <a class="maps" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Sumar%C3%A9%2C+73+Perdizes+S%C3%A3o+Paulo" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <span>Como chegar<small>Abre rotas no Google Maps</small></span>
       </a>
-      <a href="tel:+551138641616">
+      <a class="call" href="tel:+551138641616">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15 15 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>
-        <span>Telefone fixo<small>☎ (11) 3864-1616</small></span>
+        <span>Ligar<small>(11) 3864-1616</small></span>
       </a>
     </div>
   </div>
 
   <div class="unit-card" style="margin-top:.6rem;">
     <div class="unit-card__head">
-      <span class="pin"></span>
-      Unidade Barra Funda
+      <span class="pin">📍</span>
+      <span>
+        <strong>Unidade Barra Funda</strong>
+        <div class="unit-card__addr">Rua Quirino dos Santos, 230 — Várzea da Barra Funda<br>São Paulo — SP · CEP 01141-020</div>
+      </span>
     </div>
     <div class="unit-card__nums">
-      <a class="zap" href="https://api.whatsapp.com/send/?phone=5511991998096&text=Olá!%20Vim%20pelo%20site%20do%20Centro%20Automotivo%20Meta%20e%20gostaria%20de%20atendimento!&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5 1.78.76 2.47.82 3.36.7.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg></span>
-        <span>WhatsApp<small>+55 11 99199-8096</small></span>
+      <a class="maps" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Quirino+dos+Santos%2C+230+V%C3%A1rzea+da+Barra+Funda+S%C3%A3o+Paulo" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <span>Como chegar<small>Abre rotas no Google Maps</small></span>
       </a>
-      <a href="tel:+551138224481">
+      <a class="call" href="tel:+551138224481">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15 15 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></span>
-        <span>Telefone fixo<small>☎ (11) 3822-4481</small></span>
+        <span>Ligar<small>(11) 3822-4481</small></span>
       </a>
     </div>
   </div>
