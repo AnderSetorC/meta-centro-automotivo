@@ -1,6 +1,6 @@
 # Meta Centro Automotivo — Site
 
-Site institucional da **Meta Centro Automotivo** (Centro Automotivo Porto Seguro Meta). Duas unidades em São Paulo: **Perdizes** e **Várzea da Barra Funda**.
+Site institucional da **Meta Centro Automotivo** (Centro Automotivo Porto Serviço Meta). Duas unidades em São Paulo: **Perdizes** e **Várzea da Barra Funda**.
 
 ---
 
@@ -108,7 +108,7 @@ As tags **funcionam em qualquer domínio** porque rodam no navegador do visitant
 - **Botão flutuante WhatsApp** em todas as páginas
 - **Como Chegar** com Google Maps embed (em `sobre.html`)
 - **Página /bio** para link in bio do Instagram
-- **Banner Porto Seguro** em todas as páginas + card destaque
+- **Banner Porto Serviço** em todas as páginas + card destaque (logos: `logo-porto-servico.png`, `logo-meta-porto.png`)
 
 ### Estrutura de arquivos
 ```
@@ -148,7 +148,7 @@ site/
 - **CNPJ:** 04.451.815/0001-48
 - **IE:** 116.988.999.110
 - **Razão Social:** Meta Servicos Automotivos LTDA
-- **Marca:** Centro Automotivo Porto Seguro Meta
+- **Marca:** Centro Automotivo Porto Serviço Meta
 - **Domínio:** centroautomotivometa.com.br
 - **Instagram:** @caps.meta
 - **Facebook:** /capsmeta
